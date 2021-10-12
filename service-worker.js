@@ -41,6 +41,10 @@ workbox.precaching.precacheAndRoute([
     revision: REVISION_VERSION,
   },
   {
+    url: 'https://cdn.logis.com.co/css/inc/bootstrap/bootstrap.min.css',
+    revision: '69bf746a9ecc6',
+  },
+  {
     url: 'https://cdn.logis.com.co/js/lib/jquery-3.4.1.min.js',
     revision: '69bf746a9ecc6',
   },
