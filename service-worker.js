@@ -19,7 +19,7 @@ const REVISION_VERSION = "v1.31";
 // Nombres precache
 workbox.core.setCacheNameDetails({
   prefix: "logisDistri",
-  suffix: "1.1.3",
+  suffix: "1.1.4",
   precache: "precache",
   runtime: "runtime",
 });
