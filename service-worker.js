@@ -14,7 +14,7 @@ const { ExpirationPlugin } = workbox.expiration;
 const { warmStrategyCache } = workbox.recipes;
 const { offlineFallback } = workbox.recipes;
 const { precacheAndRoute } = workbox.precaching;
-const REVISION_VERSION = "v1.37";
+const REVISION_VERSION = "v1.38";
 
 // Nombres precache
 workbox.core.setCacheNameDetails({
