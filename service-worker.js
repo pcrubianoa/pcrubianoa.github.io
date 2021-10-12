@@ -14,12 +14,12 @@ const { ExpirationPlugin } = workbox.expiration;
 const { warmStrategyCache } = workbox.recipes;
 const { offlineFallback } = workbox.recipes;
 const { precacheAndRoute } = workbox.precaching;
-const REVISION_VERSION = "v1.29";
+const REVISION_VERSION = "v1.30";
 
 // Nombres precache
 workbox.core.setCacheNameDetails({
   prefix: "logisDistri",
-  suffix: "1.1.2",
+  suffix: "1.1.3",
   precache: "precache",
   runtime: "runtime",
 });
@@ -29,6 +29,10 @@ console.log({suffix: workbox.core.cacheNames.suffix});
 // Registrar Archivos en Static Cache
 workbox.precaching.precacheAndRoute([
   {
+    url: 'manifest.json',
+    revision: REVISION_VERSION,
+  },
+  {
     url: 'index.html',
     revision: REVISION_VERSION,
   },
@@ -37,7 +41,15 @@ workbox.precaching.precacheAndRoute([
     revision: REVISION_VERSION,
   },
   {
+    url: 'https://cdn.logis.com.co/js/lib/jquery-3.4.1.min.js',
+    revision: '69bf746a9ecc6',
+  },
+  {
     url: 'https://cdn.logis.com.co/js/lib/bootstrap.min.js',
+    revision: '69bf746a9ecc6',
+  },
+  {
+    url: 'https://cdn.logis.com.co/js/lib/popper.min.js',
     revision: '69bf746a9ecc6',
   },
   {
